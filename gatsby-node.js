@@ -1,7 +1,8 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+module.exports.onCreateNode = ({node, actions}) => {
+    createNodeField = actions
+    if (node.internal.type === 'Airtable') {    
+        console.log(JSON.stringify(node, undefined, 4))
+    }
+    
+}
 
-// You can delete this file if you're not using it
