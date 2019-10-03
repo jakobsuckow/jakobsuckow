@@ -10,6 +10,11 @@ const IndexPage = () => (
     <div class="wrapper">
       <aside>
         <p>Jakob Suckow</p>
+        <ul class="bio">
+          <li>loc: Berlin</li>
+          <li>linkedIn: Jakob Suckow</li>
+          <li>twitter</li>
+        </ul>
       <ProfileImage />
       </aside>
       <main>
