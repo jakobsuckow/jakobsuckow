@@ -1,22 +1,22 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import ProfileImage from '../components/profileImage'
-import Layout from "../components/layout"
 import SEO from "../components/seo"
+import "../styles/index.scss"
 
 const IndexPage = () => (
-  <Layout>
+  <>
     <SEO title="Home" />
-    <ProfileImage />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+    <div class="wrapper">
+      <aside>
+        <p>Jakob Suckow</p>
+      <ProfileImage />
+      </aside>
+      <main>
+        <p>this is where the big list will go</p>
+      </main>
     </div>
-
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+  </>
 )
 
 export default IndexPage
