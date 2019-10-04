@@ -1,15 +1,24 @@
 $pc1: #121212;
 $pc2: #ffffff;
 
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
 * {
     margin: 0;
     padding :0;
+}
+
+html {
+    font-family: 'Roboto Mono', monospace;
+
 }
 
 ul {
     list-style: none;
 }
 body {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.8em;
     background-color: #121212;
     color: #fff;
 }
@@ -32,5 +41,15 @@ main {
 .project__list {
     width: 100%;
     display: inline-flex;
-    border-bottom: 1px solid $pc2
+    border-bottom: 1px solid $pc2;
+    cursor: default;
+
+    .year {
+        padding-right: 10px;
+    }
+
+    .project__name:hover {
+        font-style: italic;
+    }
+
 }
