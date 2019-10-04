@@ -1,5 +1,7 @@
 $pc1: #121212;
 $pc2: #ffffff;
+$break-small: 800px;
+$break-large: 1200px;
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
@@ -27,15 +29,21 @@ body {
     display: flex;
     height: 100vh;
     width: auto;
+
 }
 
 aside {
     height: 100vh;
     width: 20%;
+
+    @media screen and (max-width: $break-small) {
+        width: 100%;
+    }
 }
 
 main {
     width: 80%;
+
 }
 
 .project__list {
@@ -52,4 +60,27 @@ main {
         font-style: italic;
     }
 
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        width: 100%;
+    }
+
+    .wrapper {
+        display: block;
+    }
+
+    ul {
+        margin: 0;
+    }
+
+    aside {
+        height: 40%;
+    }
+
+    aside .gatsby-image-wrapper {
+        max-width: 200px;
+        margin: 0 auto;
+    }
 }
