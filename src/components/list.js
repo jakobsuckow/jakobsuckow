@@ -9,8 +9,9 @@ const List = () => {
             node {
               data {
                 Description
-                Name
+                Title
                 Year
+                Format
                 Attachments {
                   filename
                   id
@@ -42,7 +43,8 @@ const List = () => {
             <ul key={index} className="project__list">
                 
                 <li className="year">{edge.node.data.Year}</li>
-                <li className="project__name">{edge.node.data.Name}</li>
+                <li className="project__name">{edge.node.data.Title}</li>
+                <li className="format">{edge.node.data.Format}</li>
             </ul>
         ))}
         </>
