@@ -4,13 +4,15 @@ import ProfileImage from '../components/profileImage'
 import SEO from "../components/seo"
 import "../styles/index.scss"
 
+import List from '../components/list'
+
 const IndexPage = () => (
   <>
     <SEO title="Home" />
     <div class="wrapper">
       <aside>
         <p>Jakob Suckow</p>
-        <ul class="bio">
+        <ul className="bio">
           <li>loc: Berlin</li>
           <li>linkedIn: Jakob Suckow</li>
           <li>twitter</li>
@@ -18,7 +20,7 @@ const IndexPage = () => (
       <ProfileImage />
       </aside>
       <main>
-        <p>this is where the big list will go</p>
+        <List />
       </main>
     </div>
   </>
