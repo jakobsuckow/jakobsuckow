@@ -11,10 +11,9 @@ const IndexPage = () => (
     <SEO title="Home" />
     <div class="wrapper">
       <aside>
-        <p>Jakob Suckow</p>
         <ProfileImage />
         <ul className="bio">
-          <li>loc: Berlin</li>
+          <li>located: Berlin</li>
           <li>linkedIn: Jakob Suckow</li>          
         </ul>
      

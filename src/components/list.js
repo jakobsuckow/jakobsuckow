@@ -27,17 +27,20 @@ const List = () => {
             }
           }
         }
-      }
-      
-      
-      
-      
+      }      
     `)
 
     return (
         <>
+        <div className="caption">
+          <ul>
+            <li>Year</li>
+            <li>Name</li>
+            </ul>
+        </div>
         {data.allAirtable.edges.map((edge, index) => (
             <ul key={index} className="project__list">
+                
                 <li className="year">{edge.node.data.Year}</li>
                 <li className="project__name">{edge.node.data.Name}</li>
             </ul>

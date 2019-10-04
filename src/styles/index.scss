@@ -17,6 +17,7 @@ html {
 
 ul {
     list-style: none;
+    margin-left: none;
 }
 body {
     font-family: 'Roboto Mono', monospace;
@@ -29,7 +30,11 @@ body {
     display: flex;
     height: 100vh;
     width: auto;
+    padding: 4em;
 
+    @media screen and (max-width: 600px) {
+        padding: 0;
+    }
 }
 
 aside {
@@ -44,6 +49,24 @@ aside {
 main {
     width: 80%;
 
+}
+
+.caption {
+    margin-left: 1.45rem;
+    border-bottom: 1px solid $pc2;
+    width: 100%;
+
+    @media screen and (max-width: 600px) {
+        margin-left: 0;
+        
+    }
+    ul {
+        margin: 0;
+        display: inline-flex;
+        padding-right: 10px;
+
+
+    }
 }
 
 .project__list {
