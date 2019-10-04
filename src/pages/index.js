@@ -12,12 +12,13 @@ const IndexPage = () => (
     <div class="wrapper">
       <aside>
         <p>Jakob Suckow</p>
+        <ProfileImage />
         <ul className="bio">
           <li>loc: Berlin</li>
           <li>linkedIn: Jakob Suckow</li>
           <li>twitter</li>
         </ul>
-      <ProfileImage />
+     
       </aside>
       <main>
         <List />
