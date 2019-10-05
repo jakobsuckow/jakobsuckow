@@ -62,11 +62,12 @@ aside {
 
 main {
     width: 80%;
+    padding: 1.45em;
 
 }
 
 .caption {
-    margin-left: 1.45rem;
+
     border-bottom: 1px solid $pc2;
     width: 100%;
     font-family: 'Roboto Mono', monospace;
@@ -139,8 +140,39 @@ main {
     }
 }
 
+.container {
+    padding-right: .5rem;
+    padding-left: .5rem;
+
+    @media screen and (min-width: 1024px) {
+    padding-right: 10rem;
+    padding-left: 10rem;
+}
+    @media screen and (min-width: 680px) {
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+    @media screen and (min-width: 321px) {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+    
+}
+
 video {
     position: relative;
     width: 100%;
     height: auto;
+}
+
+footer {
+
+    text-align: center;
+    height: 300px;
+
+    a {
+        color: $pc2;
+        text-align: center;
+        text-decoration: none;
+    }
 }

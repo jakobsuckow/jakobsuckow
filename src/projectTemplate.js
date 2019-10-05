@@ -2,7 +2,7 @@ import React from 'react'
 import SEO from './components/seo';
 import {graphql} from "gatsby";
 import './styles/index.scss';
-import {Link} from 'gatsby'
+import Footer from './components/footer'
 
 const projectTemplate = ({data}) => {
     let fields = data.allAirtable.edges[0].node.data
@@ -11,6 +11,7 @@ const projectTemplate = ({data}) => {
         <SEO
         title={`${fields.Title}`}
         />
+        <div class="container">
         <div className="intro">
             <h1>{fields.Title}</h1>
             <p>{fields.Description}</p>
@@ -18,9 +19,9 @@ const projectTemplate = ({data}) => {
            {fields.Attachments.map(a => (
              <>
              {a.type === 'video/mp4' ? (
-               <video autoplay
-               src={a.url}>
-                 video not supported
+               <video autoplay loop>
+               <source src={a.url} type="video/mp4" />
+                video not supported
                </video>
              ): (
               <img src={a.url} alt={a.filename} />
@@ -30,11 +31,8 @@ const projectTemplate = ({data}) => {
            ))}
             
         </div>
-        <Link 
-        to="/"
-        >
-          Home
-        </Link>
+        </div>
+        <Footer />
         </>
     )
 }
