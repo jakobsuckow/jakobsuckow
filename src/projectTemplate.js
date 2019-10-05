@@ -2,6 +2,7 @@ import React from 'react'
 import SEO from './components/seo';
 import {graphql} from "gatsby";
 import './styles/index.scss';
+import {Link} from 'gatsby'
 
 const projectTemplate = ({data}) => {
     let fields = data.allAirtable.edges[0].node.data
@@ -15,7 +16,7 @@ const projectTemplate = ({data}) => {
             <p>{fields.Description}</p>
             <p>{fields.Year}</p>
             {fields.Attachments[0].type === 'video/mp4' ? (
-              <video controls >
+              <video autoPlay >
               <source src={fields.Attachments[0].url} type="video/mp4" />
             Your browser does not support the video tag.
             </video>
@@ -25,6 +26,11 @@ const projectTemplate = ({data}) => {
             }
             
         </div>
+        <Link 
+        to="/"
+        >
+          Home
+        </Link>
         </>
     )
 }
