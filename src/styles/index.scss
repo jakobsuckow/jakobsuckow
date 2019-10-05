@@ -71,7 +71,7 @@ main {
 
 .project__list {
     width: 100%;
-    display: inline-flex;
+    display: table;
     border-bottom: 1px solid $pc2;
     cursor: default;
 
@@ -80,6 +80,7 @@ main {
     }
     .format {
         right: 4em;
+        float: right;
     }
 
     .project__name:hover {
@@ -89,6 +90,10 @@ main {
     a {
         color: $pc2;
         text-decoration: none;
+    }
+
+    li {
+        display: inline-block;
     }
 
 }
