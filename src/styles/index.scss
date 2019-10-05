@@ -15,6 +15,12 @@ html {
 
 }
 
+p, h1, h2, h3, ul, li {
+    font-family: 'Roboto Mono', monospace;
+    color: $pc2;
+}
+
+
 ul {
     list-style: none;
     margin-left: none;
