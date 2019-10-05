@@ -18,12 +18,14 @@ html {
 ul {
     list-style: none;
     margin-left: none;
+    color: $pc2;
+    font-family: 'Roboto Mono', monospace;
 }
 body {
     font-family: 'Roboto Mono', monospace;
     font-size: 0.8em;
     background-color: #121212;
-    color: #fff;
+    color: $pc2;
 }
 
 .wrapper {
@@ -55,6 +57,7 @@ main {
     margin-left: 1.45rem;
     border-bottom: 1px solid $pc2;
     width: 100%;
+    font-family: 'Roboto Mono', monospace;
 
     @media screen and (max-width: 600px) {
         margin-left: 0;
@@ -64,7 +67,7 @@ main {
         margin: 0;
         display: inline-flex;
         padding-right: 10px;
-
+        color: $pc2;
 
     }
 }
@@ -90,10 +93,13 @@ main {
     a {
         color: $pc2;
         text-decoration: none;
+        font-family: 'Roboto Mono', monospace;
     }
 
     li {
         display: inline-block;
+        color: $pc2;
+        font-family: 'Roboto Mono', monospace;
     }
 
 }
