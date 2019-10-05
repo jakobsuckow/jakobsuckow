@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import "../styles/index.scss"
 
 import List from '../components/list'
+import Footer from '../components/footer'
 
 const IndexPage = () => (
   <>
@@ -22,6 +23,7 @@ const IndexPage = () => (
         <List />
       </main>
     </div>
+    <Footer />
   </>
 )
 
