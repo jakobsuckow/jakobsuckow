@@ -15,15 +15,19 @@ const projectTemplate = ({data}) => {
             <h1>{fields.Title}</h1>
             <p>{fields.Description}</p>
             <p>{fields.Year}</p>
-            {fields.Attachments[0].type === 'video/mp4' ? (
-              <video autoPlay >
-              <source src={fields.Attachments[0].url} type="video/mp4" />
-            Your browser does not support the video tag.
-            </video>
-            ): (
-              <img src={fields.Attachments[0].url} alt={fields.Title} />
-            )
-            }
+           {fields.Attachments.map(a => (
+             <>
+             {a.type === 'video/mp4' ? (
+               <video autoplay
+               src={a.url}>
+                 video not supported
+               </video>
+             ): (
+              <img src={a.url} alt={a.filename} />
+             )}
+             
+             </>
+           ))}
             
         </div>
         <Link 

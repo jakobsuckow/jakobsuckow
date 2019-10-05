@@ -27,6 +27,12 @@ ul {
     color: $pc2;
     font-family: 'Roboto Mono', monospace;
 }
+
+ul.bio {
+    @media screen and (max-width: $break-small) {
+        text-align: center;
+    }
+}
 body {
     font-family: 'Roboto Mono', monospace;
     font-size: 0.8em;
