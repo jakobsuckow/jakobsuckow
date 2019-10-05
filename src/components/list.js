@@ -1,5 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+const { slugify } = require('../helpers')
+
 
 const List = () => {
     const data = useStaticQuery(graphql`
@@ -43,7 +45,11 @@ const List = () => {
             <ul key={index} className="project__list">
                 
                 <li className="year">{edge.node.data.Year}</li>
-                <li className="project__name">{edge.node.data.Title}</li>
+                <li className="project__name">
+                <a href={`projects/${slugify(edge.node.data.Title)}`}>
+                  {edge.node.data.Title}
+                </a>
+                </li>
                 <li className="format">{edge.node.data.Format}</li>
             </ul>
         ))}
