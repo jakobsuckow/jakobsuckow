@@ -15,7 +15,8 @@ const IndexPage = () => (
         <ProfileImage />
         <ul className="bio">
           <li>located: Berlin</li>
-          <li>linkedIn: Jakob Suckow</li>          
+          <li>linkedIn: Jakob Suckow</li>  
+          <li>email: jakob.suckow94@gmail.com</li>        
         </ul>
      
       </aside>

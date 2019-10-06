@@ -3,6 +3,7 @@ import SEO from './components/seo';
 import {graphql} from "gatsby";
 import './styles/index.scss';
 import Footer from './components/footer'
+import Fade from 'react-reveal'
 
 const projectTemplate = ({data}) => {
     let fields = data.allAirtable.edges[0].node.data
@@ -18,13 +19,18 @@ const projectTemplate = ({data}) => {
             <p>{fields.Year}</p>
            {fields.Attachments.map(a => (
              <>
+             
              {a.type === 'video/mp4' ? (
+               <Fade>
                <video autoplay loop>
                <source src={a.url} type="video/mp4" />
                 video not supported
                </video>
+               </Fade>
              ): (
+               <Fade>
               <img src={a.url} alt={a.filename} />
+              </Fade>
              )}
              
              </>
