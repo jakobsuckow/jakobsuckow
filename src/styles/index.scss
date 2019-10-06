@@ -137,6 +137,9 @@ main {
     aside .gatsby-image-wrapper {
         max-width: 200px;
         margin: 0 auto;
+        @media screen and (max-width: 600px) {
+            margin-top: 2em;
+        }
     }
 }
 
@@ -168,8 +171,11 @@ video {
 footer {
 
     text-align: center;
-    height: 300px;
+    height: 200px;
 
+    @media screen and (max-width: 600px){
+        height: 100px;
+    }
     a {
         color: $pc2;
         text-align: center;
