@@ -6,10 +6,13 @@ const footer = () => {
     return (
 
         <footer>
-        <div class="footer-wrapper">
-            <div class="container">
+        <div className="footer-wrapper">
+            <div className="container">
             <ul>
-                <li>Copyright &copy; Jakob Suckow</li>
+                <li>
+                    Copyright &copy; <Link to="/">Jakob Suckow </Link> 
+                    {new Date().getFullYear()}
+                </li>
                 <li>All rights reserved</li>
                 <li>Social: 
                     Jakob Suckow

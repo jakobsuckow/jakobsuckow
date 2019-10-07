@@ -16,6 +16,7 @@ const projectTemplate = ({data}) => {
         <div className="intro">
             <h1>{fields.Title}</h1>
             <p>{fields.Description}</p>
+            <p>My Role: {fields.My_Role}</p>
             <p>{fields.Year}</p>
            {fields.Attachments.map(a => (
              <>
@@ -46,8 +47,8 @@ const projectTemplate = ({data}) => {
 export default projectTemplate
 
 export const pageQuery = graphql`
-query templateQuery($title: String!) {
-  allAirtable(filter: {data: {Title: {eq: $title}}}) {
+query templateQuery {
+  allAirtable {
     edges {
       node {
         data {
@@ -72,11 +73,14 @@ query templateQuery($title: String!) {
             filename
             type
           }
+          My_Role
         }
       }
     }
   }
 }
+
+
 
 
 
