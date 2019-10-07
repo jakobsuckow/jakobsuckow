@@ -170,6 +170,23 @@ video {
 
 footer {
 
+    .footer-wrapper {
+
+
+        ul {
+            display: flex;
+
+           
+
+        }
+
+        li {
+
+            width: 33%;
+            left: 0;
+        }
+    }
+
     text-align: center;
     height: 200px;
 
