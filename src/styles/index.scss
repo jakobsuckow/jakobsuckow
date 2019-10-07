@@ -15,6 +15,10 @@ html {
 
 }
 
+pre {
+    color: $pc2;
+}
+
 p, h1, h2, h3, ul, li {
     font-family: 'Roboto Mono', monospace;
     color: $pc2;
@@ -160,6 +164,17 @@ main {
         padding-left: 3rem;
     }
     
+}
+
+.intro {
+    margin-top: 1.4em;
+    display: flex;
+    .title {
+        width: 40%;
+    }
+    .desc {
+        width: 60%;
+    }
 }
 
 video {

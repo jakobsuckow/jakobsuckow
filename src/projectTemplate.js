@@ -12,12 +12,18 @@ const projectTemplate = ({data}) => {
         <SEO
         title={`${fields.Title}`}
         />
+        {/* <p>{JSON.stringify(fields, 4, null)}</p> */}
         <div class="container">
         <div className="intro">
+            <div class="title">
             <h1>{fields.Title}</h1>
+            </div>
+            <div class="desc">
             <p>{fields.Description}</p>
             <p>My Role: {fields.My_Role}</p>
             <p>{fields.Year}</p>
+            </div>
+        </div>
            {fields.Attachments.map(a => (
              <>
              
@@ -37,7 +43,7 @@ const projectTemplate = ({data}) => {
              </>
            ))}
             
-        </div>
+
         </div>
         <Footer />
         </>
@@ -47,8 +53,8 @@ const projectTemplate = ({data}) => {
 export default projectTemplate
 
 export const pageQuery = graphql`
-query templateQuery {
-  allAirtable {
+query templateQuery($title: String!) {
+  allAirtable(filter: {data: {Title: {eq: $title}}}) {
     edges {
       node {
         data {
@@ -79,8 +85,6 @@ query templateQuery {
     }
   }
 }
-
-
 
 
 
