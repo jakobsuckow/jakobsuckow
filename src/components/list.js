@@ -39,7 +39,7 @@ const List = () => {
           <ul>
             <li className="year">Year</li>
             <li className="project__name">Name</li>
-            <li className="format">Format</li>
+            <li className="caption_format">Format</li>
             </ul>
         </div>
         {data.allAirtable.edges.map((edge, index) => (
@@ -52,8 +52,13 @@ const List = () => {
                 </a>
                 </li>
                 <li className="format">{edge.node.data.Format}</li>
+                <div class="hoverImage" style={{zIndex: `${index}`}}>
+                  <img src={edge.node.data.Attachments[0].url} alt={edge.node.data.Title} />
+                </div>
             </ul>
         ))}
+
+
         </>
     )
 }

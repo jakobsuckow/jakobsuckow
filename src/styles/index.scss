@@ -101,6 +101,7 @@ main {
     .format {
         right: 4em;
         float: right;
+        right: 10px;
     }
 
     .project__name:hover {
@@ -119,6 +120,10 @@ main {
         font-family: 'Roboto Mono', monospace;
     }
 
+}
+
+.caption_format {
+    float: right;
 }
 
 @media screen and (max-width: 600px) {
@@ -176,6 +181,29 @@ main {
         width: 60%;
     }
 }
+
+.hoverImage {
+    position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      top: 15%;
+      left: 0;
+      right: 0;
+      max-width: 25%;
+}
+
+.hoverImage img {
+    display: none;
+    visibility: hidden;
+
+}
+
+.hoverImage:hover img {
+    display: block;
+    visibility: visible;
+}
+
+
 
 video {
     position: relative;
