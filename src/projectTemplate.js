@@ -16,7 +16,11 @@ const projectTemplate = ({data}) => {
         <div class="container">
         <div className="intro">
             <div class="title">
-            <h1>{fields.Title}</h1>
+            {fields.Link ? (
+              <h1><a href={fields.Link}>{fields.Title}</a></h1>
+            ): <h1>
+                {fields.Title}
+            </h1>}
             </div>
             <div class="desc">
             <p>{fields.Description}</p>
@@ -61,6 +65,7 @@ query templateQuery($title: String!) {
           Description
           Format
           Title
+          Link
           Year
           Attachments {
             thumbnails {

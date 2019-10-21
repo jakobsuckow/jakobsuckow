@@ -19,10 +19,21 @@ pre {
     color: $pc2;
 }
 
-p, h1, h2, h3, ul, li {
+p, h1, h2, h3, ul, li, a {
     font-family: 'Roboto Mono', monospace;
     color: $pc2;
 }
+
+a {
+    font-family: 'Roboto Mono', monospace;
+    color: $pc2;
+    text-decoration: none;
+
+    :hover {
+        color: $pc2;
+    }
+}
+
 
 
 ul {

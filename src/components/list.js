@@ -40,7 +40,7 @@ const List = () => {
             <li className="year">Year</li>
             <li className="project__name">Name</li>
             <li className="caption_format">Format</li>
-            </ul>
+          </ul>
         </div>
         {data.allAirtable.edges.map((edge, index) => (
             <ul key={index} className="project__list">
