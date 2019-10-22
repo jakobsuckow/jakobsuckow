@@ -10,6 +10,7 @@ $break-large: 1200px;
     padding :0;
 }
 
+
 html {
     font-family: 'Roboto Mono', monospace;
 
@@ -176,8 +177,8 @@ main {
         padding-left: 5rem;
     }
     @media screen and (min-width: 321px) {
-        padding-right: 3rem;
-        padding-left: 3rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
     }
     
 }
@@ -185,6 +186,10 @@ main {
 .intro {
     margin-top: 1.4em;
     display: flex;
+    @media screen and (min-width: 321px) {
+        display: block;
+    }
+
     .title {
         width: 40%;
     }
