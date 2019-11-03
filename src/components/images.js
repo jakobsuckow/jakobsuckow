@@ -1,17 +1,14 @@
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from "gatsby"
 
 export const useImages = () => {
-const { allImages } = useStaticQuery(graphql`
-query allImages {
-  airtable {
-    data {
-      Title
+  const { allImages } = useStaticQuery(graphql`
+    query allImages {
+      airtable {
+        data {
+          Title
+        }
+      }
     }
-  }
+  `)
+  return allImages.airtable.data
 }
-`
-)
-return allImages.airtable.data
-
-}
-

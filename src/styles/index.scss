@@ -3,258 +3,245 @@ $pc2: #ffffff;
 $break-small: 800px;
 $break-large: 1200px;
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
 
 * {
-    margin: 0;
-    padding :0;
+  margin: 0;
+  padding: 0;
 }
 
-
 html {
-    font-family: 'Roboto Mono', monospace;
-
+  font-family: "Roboto Mono", monospace;
 }
 
 pre {
-    color: $pc2;
+  color: $pc2;
 }
 
-p, h1, h2, h3, ul, li, a {
-    font-family: 'Roboto Mono', monospace;
-    color: $pc2;
+p,
+h1,
+h2,
+h3,
+ul,
+li,
+a {
+  font-family: "Roboto Mono", monospace;
+  color: $pc2;
 }
 
 a {
-    font-family: 'Roboto Mono', monospace;
-    color: $pc2;
-    text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+  color: $pc2;
+  text-decoration: none;
 
-    :hover {
-        color: $pc2;
-    }
+  :hover {
+    color: $pc2;
+  }
 }
 
-
-
 ul {
-    list-style: none;
-    margin-left: none;
-    color: $pc2;
-    font-family: 'Roboto Mono', monospace;
+  list-style: none;
+  margin-left: none;
+  color: $pc2;
+  font-family: "Roboto Mono", monospace;
 }
 
 ul.bio {
-    @media screen and (max-width: $break-small) {
-        text-align: center;
-    }
+  @media screen and (max-width: $break-small) {
+    text-align: center;
+  }
 }
 body {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 0.8em;
-    background-color: #121212;
-    color: $pc2;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.8em;
+  background-color: #121212;
+  color: $pc2;
 }
 
 .wrapper {
-    display: flex;
-    height: 100vh;
-    width: auto;
-    padding: 4em;
+  display: flex;
+  height: 100vh;
+  width: auto;
+  padding: 4em;
 
-    @media screen and (max-width: 600px) {
-        padding: 0;
-    }
+  @media screen and (max-width: 600px) {
+    padding: 0;
+  }
 }
 
 aside {
-    height: 100vh;
-    width: 20%;
+  height: 100vh;
+  width: 20%;
 
-    @media screen and (max-width: $break-small) {
-        width: 100%;
-    }
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+  }
 }
 
 main {
-    width: 80%;
-    padding: 1.45em;
-
+  width: 80%;
+  padding: 1.45em;
 }
 
 .caption {
+  border-bottom: 1px solid $pc2;
+  width: 100%;
+  font-family: "Roboto Mono", monospace;
 
-    border-bottom: 1px solid $pc2;
-    width: 100%;
-    font-family: 'Roboto Mono', monospace;
-
-    @media screen and (max-width: 600px) {
-        margin-left: 0;
-        
-    }
-    ul {
-        margin: 0;
-        display: inline-flex;
-        padding-right: 10px;
-        color: $pc2;
-
-    }
+  @media screen and (max-width: 600px) {
+    margin-left: 0;
+  }
+  ul {
+    margin: 0;
+    display: inline-flex;
+    padding-right: 10px;
+    color: $pc2;
+  }
 }
 
 .project__list {
-    width: 100%;
-    display: table;
-    border-bottom: 1px solid $pc2;
-    cursor: default;
+  width: 100%;
+  display: table;
+  border-bottom: 1px solid $pc2;
+  cursor: default;
 
-    .year {
-        padding-right: 10px;
-    }
-    .format {
-        right: 4em;
-        float: right;
-        right: 10px;
-    }
+  .year {
+    padding-right: 10px;
+  }
+  .format {
+    right: 4em;
+    float: right;
+    right: 10px;
+  }
 
-    .project__name:hover {
-        font-style: italic;
-    }
+  .project__name:hover {
+    font-style: italic;
+  }
 
-    a {
-        color: $pc2;
-        text-decoration: none;
-        font-family: 'Roboto Mono', monospace;
-    }
+  a {
+    color: $pc2;
+    text-decoration: none;
+    font-family: "Roboto Mono", monospace;
+  }
 
-    li {
-        display: inline-block;
-        color: $pc2;
-        font-family: 'Roboto Mono', monospace;
-    }
-
+  li {
+    display: inline-block;
+    color: $pc2;
+    font-family: "Roboto Mono", monospace;
+  }
 }
 
 .caption_format {
-    float: right;
+  float: right;
 }
 
 @media screen and (max-width: 600px) {
-    main {
-        width: 100%;
-    }
+  main {
+    width: 100%;
+  }
 
-    .wrapper {
-        display: block;
-    }
+  .wrapper {
+    display: block;
+  }
 
-    ul {
-        margin: 0;
-    }
+  ul {
+    margin: 0;
+  }
 
-    aside {
-        height: 40%;
-    }
+  aside {
+    height: 40%;
+  }
 
-    aside .gatsby-image-wrapper {
-        max-width: 200px;
-        margin: 0 auto;
-        @media screen and (max-width: 600px) {
-            margin-top: 2em;
-        }
+  aside .gatsby-image-wrapper {
+    max-width: 200px;
+    margin: 0 auto;
+    @media screen and (max-width: 600px) {
+      margin-top: 2em;
     }
+  }
 }
 
-.container, footer {
-    padding-right: .5rem;
-    padding-left: .5rem;
+.container,
+footer {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 
-    @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     padding-right: 10rem;
     padding-left: 10rem;
-}
-    @media screen and (min-width: 680px) {
-        padding-right: 5rem;
-        padding-left: 5rem;
-    }
-    @media screen and (min-width: 321px) {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
-    }
-    
+  }
+  @media screen and (min-width: 680px) {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+  @media screen and (min-width: 321px) {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
 }
 
 .intro {
-    margin-top: 1.4em;
-    display: flex;
-    @media screen and (min-width: 321px) {
-        display: block;
-    }
+  margin-top: 1.4em;
+  display: flex;
+  @media screen and (min-width: 321px) {
+    display: block;
+  }
 
-    .title {
-        width: 40%;
-    }
-    .desc {
-        width: 60%;
-    }
+  .title {
+    width: 40%;
+  }
+  .desc {
+    width: 60%;
+  }
 }
 
 .hoverImage {
-    position: absolute;
-      margin-left: auto;
-      margin-right: auto;
-      top: 15%;
-      left: 0;
-      right: 0;
-      max-width: 25%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 15%;
+  left: 0;
+  right: 0;
+  max-width: 25%;
 }
 
 .hoverImage img {
-    display: none;
-    visibility: hidden;
-
+  display: none;
+  visibility: hidden;
 }
 
 .hoverImage:hover img {
-    display: block;
-    visibility: visible;
+  display: block;
+  visibility: visible;
 }
 
-
-
 video {
-    position: relative;
-    width: 100%;
-    height: auto;
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
 footer {
-
-    .footer-wrapper {
-
-
-        ul {
-            display: flex;
-
-           
-
-        }
-
-        li {
-
-            width: 33%;
-            left: 0;
-        }
+  .footer-wrapper {
+    ul {
+      display: flex;
     }
 
+    li {
+      width: 33%;
+      left: 0;
+    }
+  }
+
+  text-align: center;
+  height: 200px;
+
+  @media screen and (max-width: 600px) {
+    height: 100px;
+  }
+  a {
+    color: $pc2;
     text-align: center;
-    height: 200px;
-
-    @media screen and (max-width: 600px){
-        height: 100px;
-    }
-    a {
-        color: $pc2;
-        text-align: center;
-        text-decoration: none;
-    }
+    text-decoration: none;
+  }
 }

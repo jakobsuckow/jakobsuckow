@@ -1,97 +1,89 @@
-import React from 'react'
-import SEO from './components/seo';
-import {graphql} from "gatsby";
-import './styles/index.scss';
-import Footer from './components/footer'
-import Fade from 'react-reveal'
+import React from "react"
+import SEO from "./components/seo"
+import { graphql } from "gatsby"
+import "./styles/index.scss"
+import Footer from "./components/footer"
+import Fade from "react-reveal"
 
-const projectTemplate = ({data}) => {
-    let fields = data.allAirtable.edges[0].node.data
-    return (
-        <>
-        <SEO
-        title={`${fields.Title}`}
-        />
-        {/* <p>{JSON.stringify(fields, 4, null)}</p> */}
-        <div class="container">
+const projectTemplate = ({ data }) => {
+  let fields = data.allAirtable.edges[0].node.data
+  return (
+    <>
+      <SEO title={`${fields.Title}`} />
+      {/* <p>{JSON.stringify(fields, 4, null)}</p> */}
+      <div class="container">
         <div className="intro">
-            <div class="title">
+          <div class="title">
             {fields.Link ? (
-              <h1><a href={fields.Link}>{fields.Title}</a></h1>
-            ): <h1>
-                {fields.Title}
-            </h1>}
-            </div>
-            <div class="desc">
+              <h1>
+                <a href={fields.Link}>{fields.Title}</a>
+              </h1>
+            ) : (
+              <h1>{fields.Title}</h1>
+            )}
+          </div>
+          <div class="desc">
             <p>{fields.Description}</p>
             <p>My Role: {fields.My_Role}</p>
             <p>{fields.Year}</p>
-            </div>
+          </div>
         </div>
-           {fields.Attachments.map(a => (
-             <>
-             
-             {a.type === 'video/mp4' ? (
-               <Fade>
-               <video autoplay loop>
-               <source src={a.url} type="video/mp4" />
-                video not supported
-               </video>
-               </Fade>
-             ): (
-               <Fade>
-              <img src={a.url} alt={a.filename} />
+        {fields.Attachments.map(a => (
+          <>
+            {a.type === "video/mp4" ? (
+              <Fade>
+                <video autoplay loop>
+                  <source src={a.url} type="video/mp4" />
+                  video not supported
+                </video>
               </Fade>
-             )}
-             
-             </>
-           ))}
-            
-
-        </div>
-        <Footer />
-        </>
-    )
+            ) : (
+              <Fade>
+                <img src={a.url} alt={a.filename} />
+              </Fade>
+            )}
+          </>
+        ))}
+      </div>
+      <Footer />
+    </>
+  )
 }
 
 export default projectTemplate
 
 export const pageQuery = graphql`
-query templateQuery($title: String!) {
-  allAirtable(filter: {data: {Title: {eq: $title}}}) {
-    edges {
-      node {
-        data {
-          Description
-          Format
-          Title
-          Link
-          Year
-          Attachments {
-            thumbnails {
-              large {
-                url
-                height
-                width
+  query templateQuery($title: String!) {
+    allAirtable(filter: { data: { Title: { eq: $title } } }) {
+      edges {
+        node {
+          data {
+            Description
+            Format
+            Title
+            Link
+            Year
+            Attachments {
+              thumbnails {
+                large {
+                  url
+                  height
+                  width
+                }
+                full {
+                  url
+                  height
+                  width
+                }
               }
-              full {
-                url
-                height
-                width
-              }
+              url
+              filename
+              type
             }
-            url
-            filename
-            type
+            My_Role
           }
-          My_Role
         }
       }
     }
   }
-}
-
-
-
-
 `
