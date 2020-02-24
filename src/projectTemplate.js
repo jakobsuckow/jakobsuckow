@@ -10,29 +10,27 @@ const projectTemplate = ({ data }) => {
   return (
     <>
       <SEO title={`${fields.Title}`} />
-      {/* <p>{JSON.stringify(fields, 4, null)}</p> */}
-      <div class="container">
+      <div className="container">
         <div className="intro">
-          <div class="title">
-            {fields.Link ? (
-              <h1>
-                <a href={fields.Link}>{fields.Title}</a>
-              </h1>
-            ) : (
-              <h1>{fields.Title}</h1>
-            )}
+          <div className="title">
+            <h1>{fields.Title}</h1>
           </div>
-          <div class="desc">
+          <div className="desc">
+            {fields.Link && (
+              <p>
+                link: <a href={fields.Link}>{fields.Title}</a>
+              </p>
+            )}
             <p>{fields.Description}</p>
             <p>My Role: {fields.My_Role}</p>
             <p>{fields.Year}</p>
           </div>
         </div>
         {fields.Attachments.map(a => (
-          <>
+          <div key={Math.random()}>
             {a.type === "video/mp4" ? (
               <Fade>
-                <video autoplay loop>
+                <video autoPlay loop>
                   <source src={a.url} type="video/mp4" />
                   video not supported
                 </video>
@@ -42,7 +40,7 @@ const projectTemplate = ({ data }) => {
                 <img src={a.url} alt={a.filename} />
               </Fade>
             )}
-          </>
+          </div>
         ))}
       </div>
       <Footer />
@@ -82,6 +80,7 @@ export const pageQuery = graphql`
             }
             My_Role
           }
+          id
         }
       }
     }
