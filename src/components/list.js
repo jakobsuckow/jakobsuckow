@@ -54,6 +54,7 @@ const List = () => {
             <img
               src={edge.node.data.Attachments[0].url}
               alt={edge.node.data.Title}
+              
             />
           </div>
         </ul>
