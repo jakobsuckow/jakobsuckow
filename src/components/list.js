@@ -34,7 +34,7 @@ const List = () => {
 
   return (
     <>
-      <div className="caption">
+      <div className="project__list">
         <ul>
           <li className="year">Year</li>
           <li className="project__name">Name</li>
@@ -54,7 +54,6 @@ const List = () => {
             <img
               src={edge.node.data.Attachments[0].url}
               alt={edge.node.data.Title}
-              
             />
           </div>
         </ul>

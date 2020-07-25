@@ -1,8 +1,10 @@
-require('dotenv').config()
+require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Jakob Suckow`,
-    description: `Jakobsuckow.net`,
+    location: `Berlin`,
+    email: `Jakob.suckow94@googlemail.com`,
+    description: ``,
     author: `Jakob Suckow`,
   },
   plugins: [
@@ -13,8 +15,7 @@ module.exports = {
         tables: [
           {
             baseId: `appFPVGCwik2DsJ7A`,
-            tableName: `Work`
-
+            tableName: `Work`,
           },
         ],
       },

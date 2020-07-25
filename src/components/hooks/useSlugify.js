@@ -1,4 +1,4 @@
-function slugify(string) {
+export const slugify = string => {
   const a =
     "àáäâãåăæąçćčđďèéěėëêęğǵḧìíïîįłḿǹńňñòóöôœøṕŕřßşśšșťțùúüûǘůűūųẃẍÿýźžż·/_,:;"
   const b =
@@ -15,8 +15,4 @@ function slugify(string) {
     .replace(/\-\-+/g, "-")
     .replace(/^-+/, "")
     .replace(/-+$/, "")
-}
-
-module.exports = {
-  slugify: slugify,
 }
